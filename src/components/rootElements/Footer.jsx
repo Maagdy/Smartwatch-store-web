@@ -14,6 +14,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { useNavigate } from "react-router-dom";
 const PUBLIC_URL = window.location.origin;
 
 const socialMediaIcons = [
@@ -38,6 +39,7 @@ const socialMediaIcons = [
 ];
 
 const Footer = () => {
+  const navigate = useNavigate();
   const theme = useTheme();
   const isMid = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -254,18 +256,19 @@ const Footer = () => {
           >
             XTRA Shop © {new Date().getFullYear()} All Rights Reserved.
           </Typography>
-          <Link
-            href="/orders"
-            color="textSecondary"
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: isMid ? "center" : "flex-start",
-              textDecoration: "none",
-            }}
-          >
-            <ShoppingCartIcon sx={{ mr: 1 }} /> Track your orders
-          </Link>
+          <Button onClick={() => navigate("/orders")} variant="">
+            <Link
+              color="textSecondary"
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: isMid ? "center" : "flex-start",
+                textDecoration: "none",
+              }}
+            >
+              <ShoppingCartIcon sx={{ mr: 1 }} /> Track your orders
+            </Link>
+          </Button>
         </Box>
       </Container>
     </Box>
