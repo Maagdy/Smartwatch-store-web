@@ -1,0 +1,50 @@
+.custom-alert {
+  background-color: #fff;
+  border: 2px solid #f39c12;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: 500px;
+  height: auto;
+}
+
+.custom-alert .swal2-title {
+  color: #d35400;
+  font-weight: bold;
+}
+
+.custom-alert .swal2-content {
+  color: #34495e;
+}
+
+.custom-alert .swal2-confirm {
+  background-color: #27ae60;
+  border: none;
+}
+
+.custom-alert .swal2-cancel {
+  background-color: #e74c3c;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .custom-alert {
+    width: "90%";
+    height: "auto";
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .custom-alert .swal2-title {
+    font-size: 1.5em;
+  }
+
+  .custom-alert .swal2-content {
+    font-size: 1em;
+  }
+
+  .custom-alert .swal2-confirm,
+  .custom-alert .swal2-cancel {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
