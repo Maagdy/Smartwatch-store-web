@@ -255,7 +255,7 @@ const Footer = () => {
             XTRA Shop © {new Date().getFullYear()} All Rights Reserved.
           </Typography>
           <Link
-            href="orders"
+            href="/orders"
             color="textSecondary"
             sx={{
               display: "flex",
