@@ -13,8 +13,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import ProductCard from "../UI/PrdouctCard";
 import { initialProducts } from "../../data/products";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductsPrev() {
+  const navigate = useNavigate();
   const theme = useTheme();
 
   const products = initialProducts.slice(0, 4);
@@ -75,7 +77,11 @@ export default function ProductsPrev() {
         </Stack>
       )}
       <Box sx={sxStyles.iconBox}>
-        <IconButton sx={sxStyles.iconBtn} href="/watches" variant="outlined">
+        <IconButton
+          sx={sxStyles.iconBtn}
+          onClick={() => navigate("/watches")}
+          variant="outlined"
+        >
           <ArrowCircleRightSharpIcon
             fontSize="large"
             sx={{
