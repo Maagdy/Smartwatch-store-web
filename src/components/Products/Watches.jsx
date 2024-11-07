@@ -158,7 +158,7 @@ export default function Watches() {
           </Select>
         </FormControl>
       </Box>
-      {currentProducts.length >= 6 && (
+      {(currentProducts.length >= 8 || currentProducts.length == 4) && (
         <Box
           sx={{
             display: "flex",
